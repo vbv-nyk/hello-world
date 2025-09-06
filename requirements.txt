@@ -1,5 +1,5 @@
-requests
-urllib3
+requests==2.32.5
+urllib3==1.26.16
 certifi
 charset-normalizer
 tabulate
