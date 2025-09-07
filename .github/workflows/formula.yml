@@ -9,8 +9,10 @@ jobs:
         run: cd deps/ && unzip "*.whl" -d ../libs
       - name: Package all the dependencies
         run: zip -r formula-assets.zip libs
+      - name: Delete the existing release
+        run: gh release delete formula-assets --yes
       - name: create a release asset from the formula-assets
-        run: gh release create formula-assets formula-assets.zip --clobber
+        run: gh release create formula-assets formula-assets.zip
     env: 
       GH_TOKEN: ${{github.token}}
     permissions:
