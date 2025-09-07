@@ -10,7 +10,7 @@ jobs:
       - name: Package all the dependencies
         run: zip -r formula-assets.zip libs
       - name: Delete the existing release
-        run: gh release delete FormulaAI --yes || true
+        run: gh release delete FormulaAI --cleanup-tag --yes || true
       - name: create a release asset from the formula-assets
         run: gh release create FormulaAI formula-assets.zip
     env: 
