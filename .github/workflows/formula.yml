@@ -6,5 +6,5 @@ jobs:
       - name: Creates the dependencies required for the python project to run
         run: pip download -r requirements.txt -d deps/ && cd deps/ && ls
       - name: Next we need to unzip all files inside deps to formula_assets/
-        run: unzip '*.whl' -d libs/ && ls && cd libs && ls
+        run: for z in *.whl; do unzip "$z" -d ../libs; done
 "on": "push"
