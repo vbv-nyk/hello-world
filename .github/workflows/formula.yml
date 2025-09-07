@@ -5,4 +5,6 @@ jobs:
       - uses: actions/checkout@v5
       - name: Creates the dependencies required for the python project to run
         run: pip download -r requirements.txt -d deps/ 
+      - name: Next we need to unzip all files inside deps to formula_assets/
+        run: unzip '*.whl' -d libs/ && ls && cd libs && ls
 "on": "push"
