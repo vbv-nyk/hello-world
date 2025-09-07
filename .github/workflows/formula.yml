@@ -7,6 +7,8 @@ jobs:
         run: pip download -r requirements.txt -d deps/ 
       - name: Move to the directory with dependencies
         run: cd deps/ && unzip "*.whl" -d ../libs
-      - name: List  all dependencies for comfort
-        run: ls
+      - name: Package all the dependencies
+        run: zip -r formula-assets.zip libs
+      - name: create a release asset from the formula-assets
+        run: gh release formula-assets --clobber
 "on": "push"
