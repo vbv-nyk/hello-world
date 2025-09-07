@@ -1,3 +1,4 @@
+print("Adding to system path")
 import sys
 sys.path.append("libs")
 from modules.fetcher import Fetcher
