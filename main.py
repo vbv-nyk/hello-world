@@ -1,10 +1,4 @@
-from modules.fetcher import Fetcher
-from modules.reporter import Reporter
-
-# Okay now I just want to see what happens when I modify this file, can I push to the same release??/
-print("Fetching sample data from JSONPlaceholder API...")
-fetcher = Fetcher("https://jsonplaceholder.typicode.com/todos")
-data = fetcher.fetch()
-print(f"Fetched {len(data)} items.")
-reporter = Reporter(data)
-reporter.print_report()
+from modules.pybattery import PyBattery
+battery = PyBattery()
+print("Battery level:", battery.get_battery_level())
+print("Charging:", battery.is_charging())
