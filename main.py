@@ -1,6 +1,7 @@
 from modules.fetcher import Fetcher
 from modules.reporter import Reporter
 
+# Okay now I just want to see what happens when I modify this file, can I push to the same release??/
 print("Fetching sample data from JSONPlaceholder API...")
 fetcher = Fetcher("https://jsonplaceholder.typicode.com/todos")
 data = fetcher.fetch()
