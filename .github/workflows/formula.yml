@@ -6,7 +6,7 @@ jobs:
       - name: Creates the dependencies required for the python project to run
         run: pip download -r requirements.txt -d deps/ 
       - name: Move to the directory with dependencies
-        run: cd deps/ 
+        run: cd deps/ && unzip "*.whl" -d ../libs
       - name: List  all dependencies for comfort
         run: ls
 "on": "push"
