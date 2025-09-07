@@ -23,7 +23,10 @@ class PyLocale:
     def get_country(self): return LocaleHelper.getCountry()
 
 class PyDisplay:
-    def get_resolution(self): return DisplayHelper.getScreenResolution()
+    def get_resolution(self): 
+        pair = DisplayHelper.getScreenResolution()
+        return (pair.getFirst(), pair.getSecond())
+
     def get_density(self): return DisplayHelper.getDensityDpi()
 
 class PyApp:
