@@ -8,4 +8,5 @@ jobs:
       - name: Move to the directory with dependencies
         run: cd deps/ 
       - name: List  all dependencies for comfort
+        run: ls
 "on": "push"
