@@ -11,4 +11,6 @@ jobs:
         run: zip -r formula-assets.zip libs
       - name: create a release asset from the formula-assets
         run: gh release create formula-assets libs/
+    env: 
+      GH_TOKEN: ${{github.token}}
 "on": "push"
