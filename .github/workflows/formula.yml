@@ -1,0 +1,6 @@
+jobs:
+  create-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Creates the dependencies required for the python project to run
+        run: pip download -r requirements.txt -d deps/ 
