@@ -1,5 +1,8 @@
+import sys
+sys.path.append("libs")
 from modules.fetcher import Fetcher
 from modules.reporter import Reporter
+
 
 def run():
     print("Fetching sample data from JSONPlaceholder API...")
