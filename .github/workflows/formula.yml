@@ -13,10 +13,8 @@ jobs:
         run: gh release delete FormulaAI --cleanup-tag --yes || true
       - name: create a release asset from the formula-assets
         run: gh release create FormulaAI formula-assets.zip
-      - name: Add a topic for compatibility
-        run: gh repo edit --add-topic formulaai-script
     env: 
       GH_TOKEN: ${{github.token}}
     permissions:
       contents: write
-"on": push
+"on": "push"
